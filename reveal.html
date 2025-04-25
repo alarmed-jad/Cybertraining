@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Toolkit</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .logo { width: 150px; margin-bottom: 20px; }
+        .button { background: #0066ff; color: white; padding: 15px 25px; border: none; border-radius: 5px; cursor: pointer; }
+        #reveal { display: none; background: #fff4f4; padding: 20px; border-radius: 10px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+        <!-- Reveal Message (Hidden Initially) -->
+    <div id="reveal">
+        <h2>🚨 Gotcha! This was a quishing demo.</h2>
+        <p><strong>What just happened?</strong> Attackers trick you into scanning QR codes to steal data or install malware.</p>
+        <p><strong>Stay safe:</strong> Always verify URLs before scanning/clicking!</p>
+    </div>
+
+    <script>
+        function showReveal() {
+            document.getElementById('reveal').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
