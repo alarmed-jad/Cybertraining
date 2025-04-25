@@ -6,6 +6,7 @@
         body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
         .logo { width: 150px; margin-bottom: 20px; }
         .button { background: #0066ff; color: white; padding: 15px 25px; border: none; border-radius: 5px; cursor: pointer; }
+        #reveal { display: none; background: #fff4f4; padding: 20px; border-radius: 10px; margin-top: 30px; }
     </style>
 </head>
 <body>
@@ -18,21 +19,20 @@
         <h3>🔒 Sign in to Download</h3>
         <input type="email" placeholder="Email" style="width: 100%; padding: 10px; margin: 10px 0;"><br>
         <input type="password" placeholder="Password" style="width: 100%; padding: 10px; margin: 10px 0;"><br>
-        <button class="button">Continue</button>
+        <button class="button" onclick="showReveal()">Continue</button>
     </div>
 
     <!-- Reveal Message (Hidden Initially) -->
-    <div id="reveal" style="display: none; background: #fff4f4; padding: 20px; border-radius: 10px; margin-top: 30px;">
+    <div id="reveal">
         <h2>🚨 Gotcha! This was a quishing demo.</h2>
         <p><strong>What just happened?</strong> Attackers trick you into scanning QR codes to steal data or install malware.</p>
         <p><strong>Stay safe:</strong> Always verify URLs before scanning/clicking!</p>
     </div>
 
     <script>
-        // Show the reveal message after 5 seconds (or on button click)
-        setTimeout(function() {
+        function showReveal() {
             document.getElementById('reveal').style.display = 'block';
-        }, 5000);
+        }
     </script>
 </body>
 </html>
